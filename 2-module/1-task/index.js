@@ -1,3 +1,5 @@
 function sumSalary(salaries) {
-  // ваш код...
+  return Object.values(salaries)
+    .filter(v => typeof v === 'number' && !isNaN(v) && isFinite(v))
+    .reduce((r, v) => r + v, 0);
 }
